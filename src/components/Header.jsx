@@ -1,6 +1,6 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+// import { HashLink } from "react-router-hash-link";
 // import SocialMediaLinkItem from "./SocialMediaLink/SocialMediaLinkItem";
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 
@@ -25,93 +25,75 @@ function Header() {
 
   return (
     // <!-- =====================Navigation=========== -->
-    <header className="header">
+    <header id="sticky-header">
       <div className="container">
-        <nav className="navigation">
-          <div className="logo logo-nav">
-            <Link to="/" className="logo-link">
-              <img src="/images/logo.png" alt="" />
-            </Link>
-          </div>
-
-          <div className={`menu ${sidebarActive ? "active" : ""}`}>
-            <div className="close-menu" onClick={() => setSidebarActive(false)}>
-              <img src="./images/close.svg" alt="" />
-            </div>
-            <ul className="menu-nav-ul">
-              <div className="left-side d-flex algin-items-center">
-                <li className="nav-list">
-                  <HashLink
-                    to="/mint"
-                    className="nav-link"
-                    onClick={_toggleSidebar}
-                  >
-                    Mint
-                  </HashLink>
-                </li>
-                <li className="nav-list">
-                  <Link
-                    to="/whitelist"
-                    className="nav-link"
-                    onClick={_toggleSidebar}
-                  >
-                    Whitelist
-                  </Link>
-                </li>
-                <li className="nav-list">
-                  <Link
-                    to="/userlist"
-                    className="nav-link"
-                    onClick={_toggleSidebar}
-                  >
-                    User list
-                  </Link>
-                </li>
-                <li className="nav-list">
-                  <HashLink
-                    to="/gallery"
-                    className="nav-link"
-                    onClick={_toggleSidebar}
-                  >
-                    Gallery
-                  </HashLink>
-                </li>
-                <li className="nav-list">
-                  <HashLink
-                    to="#faq"
-                    className="nav-link"
-                    onClick={_toggleSidebar}
-                  >
-                    Faq
-                  </HashLink>
-                </li>
-              </div>
-              <li className="nav-list-logos nav-list-logo">
-                <Link to="/" className="logo-link">
-                  <img src="/images/logo.png" alt="" className="logo-img" />
+        <div className="row d-flex align-items-center">
+          <div className="col-lg-5 col-md-12">
+            <div className="mobile-flex">
+              {/* <!-- Logo --> */}
+              <div className="logo">
+                <Link to="/">
+                  <img src="/assets/images/logo.svg" />
                 </Link>
-              </li>
-              <div className="left-side d-flex algin-items-center justify-content-center">
-                {/* <SocialMediaLinkItem /> */}
-                <div className="nav-list mt-2">
-                  <Link
-                    to="/login"
-                    className="nav-link"
-                    onClick={_toggleSidebar}
-                  >
-                    Login
-                  </Link>
-                </div>
-                {/* <button className="connect-wallet-btn" onClick={connectWallet}>
-                  {walletConnected ? "CONNECTED" : "CONNECT WALLET"}
-                </button> */}
               </div>
-            </ul>
+              {/* <!-- Mobile Hamburger Menu --> */}
+              <div className="hamburger-menu" onClick={_toggleSidebar}>
+                <img src="/assets/images/icons/menu.svg" alt="" />
+              </div>
+            </div>
           </div>
-          <div className="show-nav" onClick={_toggleSidebar}>
-            <img src="./images/menu.svg" alt="" />
+          <div className="col-lg-7">
+            <div className={`header-menu ${sidebarActive ? "active" : ""}`}>
+              {/* <!-- Mobile Menu Close Button --> */}
+              <div
+                className="close-btn"
+                onClick={() => setSidebarActive(false)}
+              >
+                <img src="/assets/images/icons/close.svg" alt="" />
+              </div>
+              <div className="header-right">
+                <ul>
+                  <li>
+                    <Link className="sub-btn" href="/#about">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="sub-btn" to="/about-us">
+                      About Us
+                    </Link>
+                  </li>
+                  <li className="dropdown">
+                    <Link className="dropbtn">
+                      Services
+                      <img
+                        src="/assets/images/home/icons/bottom-arrow.svg"
+                        alt=""
+                      />
+                    </Link>
+                    <div className="dropdown-content">
+                      <Link to="/services">Services</Link>
+                      <Link to="/service-details">Services Details</Link>
+                    </div>
+                  </li>
+                  <li>
+                    <Link className="sub-btn" to="/#team">
+                      Our Team
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="sub-btn" to="/contact-us">
+                      Contact Us
+                    </Link>
+                  </li>
+                  <li>
+                    <button className="custom-btn">Get now</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </nav>
+        </div>
       </div>
     </header>
     // {/* <!-- =====================Navigation end =========== --> */}

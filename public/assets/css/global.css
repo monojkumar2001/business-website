@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+/*===== VARIABLES CSS =====*/
+
+:root {
+  /*========== Colors ==========*/
+  --main-color: linear-gradient(90deg, #7922e6 6.15%, #9d32fa 99.99%);
+  --second-color: #061237;
+  --black-color: #0f0d1d;
+  --title-color: #393939;
+  --white-color: #ffffff;
+  --body-color: #11142d;
+  --body-font: "Roboto", sans-serif;
+  --sec-title-font: 25px;
+  --p-font: 17px;
+  --m-title: 25px;
+  --l-title: 36px;
+  --p-font-height: 30px;
+  --lp-font-height: 50px;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*========== Margin ==========*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --l-title: 35px;
+    --m-title: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --l-title: 25px;
+    --m-title: 20px;
+  }
+}
+
+/*========== BASE ==========*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+div#__next {
+  overflow-x: hidden;
+}
+body {
+  /* background-image: url(../public/assets/images/body-bg-2.svg); */
+  /* background-repeat:repeat-y; */
+  position: relative;
+  background: #f9f9fc;
+  z-index: 1;
+  color: var(--black-color);
+  font-size: var(--p-font);
+  font-weight: 500;
+  font-family: var(--body-font) !important;
+  line-height: var(--p-font-height);
+  overflow-x: hidden;
+  z-index: 1;
+  position: relative;
+}
+img {
+  vertical-align: middle;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* ============================GENERAL STYLE END======= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+span,
+label {
+  margin: 0;
+}
+
+.ovh {
+  overflow: hidden;
+}
+
+table.table {
+  white-space: nowrap;
+}
+
+/* ===================custom button============ */
+
+.custom-btn {
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, #7922e6 6.15%, #9d32fa 99.99%);
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* ===============custom button alt=============== */
+
+.btn:focus {
+  outline: 0px;
+  box-shadow: none;
+}
+
+.section-title {
+  font-weight: 700;
+  line-height: 140%;
+  font-size: 48px;
+  color: var(--black-color);
+}
+
+.section-inner-title {
+  background: linear-gradient(90deg, #7922e6 6.15%, #9d32fa 99.99%);
+  font-weight: 700;
+  font-size: 20px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2.sec-title span {
+  background: linear-gradient(90deg, #a43ef2 16.72%, #7319e2 52.82%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2.sec-title:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 40%;
+  background: linear-gradient(90deg, #4355b4 0%, #fa00ff 100%);
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  left: 29%;
+}
+
+.MuiSlider-root {
+  color: #831be4 !important;
+  height: 12px !important;
+}
+/* slider nav */
+.next,
+.prev {
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.prev span {
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.next span {
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider_nav {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+/* faq  */
+.faq-row {
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  padding: 0 20px !important;
+}
+.row-content-text {
+  color: var(--body-color) !important;
+}
+.styles_faq-row-wrapper__3vA1D {
+  background-color: var(--faq-bg-color, none) !important;
+}
+
+.row-title-text {
+  color: var(--second-color);
+  position: relative;
+  margin: 0;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.row-content-text {
+  color: var(--body-color);
+}
+
+/* // ======================end footer ================== */
+
+.is-stickys {
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  z-index: 99;
+  background-image: linear-gradient(180deg, #e4e2fd, #e4e2fd);
+}
+
+@media screen and (max-width: 992px) {
+  .row-title-text {
+    font-size: 18px;
+  }
+  .section-title {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  h2.sec-title {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .slider_nav {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .is-stickys {
+    padding: 5px 0;
+  }
+}
+
+/* =============padding margin class============= */
+
+.me-3 {
+  margin-right: 30px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.cmb-6 {
+  margin-bottom: 100px;
+}
+
+.cpy-5 {
+  padding: 50px 0;
+}
+
+.cpy-8 {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.cpy-6 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.cpt-6 {
+  padding-top: 100px;
+}
+
+.cpb-6 {
+  padding-bottom: 100px;
+}
+
+.cpt-7 {
+  padding-top: 80px;
+}
+
+.cpb-7 {
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 992px) {
+  .cpy-5 {
+    padding: 40px 0;
+  }
+  .cpy-8 {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  .cpy-6 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .cpt-6 {
+    padding-top: 80px;
+  }
+  .cpb-6 {
+    padding-bottom: 80px;
+  }
+  .cpt-7 {
+    padding-top: 60px;
+  }
+  .cpb-7 {
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cpy-5 {
+    padding: 30px 0;
+  }
+  .cpy-8 {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .cpy-6 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .cpt-6 {
+    padding-top: 60px;
+  }
+  .cpb-6 {
+    padding-bottom: 60px;
+  }
+  .cpt-7 {
+    padding-top: 40px;
+  }
+  .cpb-7 {
+    padding-bottom: 40px;
+  }
+}

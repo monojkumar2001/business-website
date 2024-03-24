@@ -1,13 +1,14 @@
 import AboutUs from "../components/AboutUs";
+import OurTeam from "../components/OurTeam";
 import Services from "../components/Services";
 
 const HomePage = () => {
   return (
     <>
-      <div className="hero">
+      <section className="hero">
         <div className="hero-wrapper">
           <div className="hero-left">
-            <p>TECHNOLOGY CONSULTANCY</p>
+            <p className="banner-sub-title">TECHNOLOGY CONSULTANCY</p>
             <h1 className="hero-title">Make The Easiest Solution For You</h1>
             <p className="hero-text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -16,13 +17,15 @@ const HomePage = () => {
             <button className="custom-btn">Learn More</button>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* ========= About Us ================ */}
       <AboutUs/>
 
       {/* ================ Services ============ */}
       <Services/>
+      {/* ============= Our Team ============= */}
+      <OurTeam/>
     </>
   );
 };

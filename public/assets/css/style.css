@@ -1,0 +1,160 @@
+.hero {
+  padding: 310px 0 210px 0;
+  background-image: url(../images/banner-1.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(16, 32, 57, 0.9) 0%,
+    rgba(11, 21, 38, 0.6) 56.25%,
+    rgba(0, 0, 0, 0) 97.81%
+  );
+}
+.hero-left {
+  max-width: 700px;
+  position: relative;
+}
+h1.hero-title {
+  color: var(--white-color);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 77px;
+  padding: 20px 0;
+}
+.hero-wrapper {
+  max-width: 1320px;
+  margin: auto;
+}
+.banner-sub-title {
+  color: var(--white-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+}
+.hero-text {
+  color: var(--white-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  padding-bottom: 40px;
+}
+
+/* =========== About us ===========*/
+.about-left {
+  position: relative;
+}
+.about-img-2 {
+  position: absolute;
+  z-index: 1;
+  right: 18px;
+  bottom: 88px;
+  border: 10px solid #ffff;
+}
+.about-list-item {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.about-list-icon {
+  width: 100px;
+  background: var(--main-color);
+  /* height: 100px; */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.about-list-icon span {
+  color: #fff;
+  font-size: 40px;
+}
+
+.about-list-content h4 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* =============== Service ========= */
+.service-title {
+  margin: auto;
+  width: 45%;
+  padding-bottom: 80px;
+  text-align: center;
+  justify-content: center;
+}
+.service-card-item {
+  background: var(--white-color);
+  overflow: hidden;
+  box-shadow: 0 10px 10px #ddd;
+  margin-bottom: 20px;
+}
+.service-card-item .service-img {
+  width: 100%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.service-card-item .service-img:nth-child(1):hover {
+  transform: scale(1.05);
+}
+.service-card-item .service-img img {
+  width: 100%;
+}
+.service-content {
+  padding: 20px;
+}
+a.service-name {
+  font-size: 25px;
+  color: var(--black-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+a.service-read-more {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7922e6;
+  margin-top: 10px;
+}
+
+/* ============ Our Team =========== */
+.our-team-item {
+  background: var(--white-color);
+  overflow: hidden;
+  box-shadow: 0 10px 10px #ddd;
+}
+.our-team-img {
+  width: 100%;
+  transition: 0.4s;
+}
+.our-team-img img {
+  width: 100%;
+}
+.our-team-item .our-team-img:nth-child(1):hover {
+  transform: scale(1.05);
+}
+.our-team-content {
+  padding: 20px;
+}
+.our-team-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
