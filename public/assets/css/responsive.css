@@ -35,4 +35,10 @@
   .contact-us-form {
     padding: 30px 20px 60px 20px;
   }
+  .service-details-img {
+    flex-direction: column;
+  }
+  .service-details-right {
+    margin-bottom: 70px;
+  }
 }

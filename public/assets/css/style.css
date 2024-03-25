@@ -302,3 +302,33 @@ a.footer-logo img {
   border: 1px solid var(--primary-color);
   border-radius: 4px;
 }
+
+.service-details-img {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.service-details-img img {
+  width: 100%;
+}
+.service-details-right {
+  background: #eceeef;
+  padding: 40px 30px;
+}
+.service-details-right h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.service-details-right ul li {
+  padding: 10px 20px;
+  background: var(--white-color);
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.service-details-right ul li a {
+  color: var(--black-color);
+}
+.service-details-right ul li a:hover {
+  color: var(--primary-color);
+}
