@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="col-md-4">
             <div className="footer-item">
               <Link className="footer-logo" href="/">
-                <img src="/assets/images/logo.svg" alt="" />
+                <img src="/assets/images/logo.png" alt="" />
               </Link>
               <p className="mt-5 mb-5">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
@@ -73,16 +73,22 @@ const Footer = () => {
               <h2 className="footer-title">Newsletter</h2>
               <p>Sign Up For News & Get 30% Off in New User.</p>
               <form action="">
-                <input type="text" className="footer-newsletter-input" />
-                <button type="submit" className="custom-btn">
-                  SUBSCRIBE NOW
-                </button>
+                <div className="news-letter-wrapper">
+                  <input
+                    type="text"
+                    className="footer-newsletter-input"
+                    placeholder="Your Email Address"
+                  />
+                  <button type="submit" className="custom-btn">
+                    SUBSCRIBE NOW
+                  </button>
+                </div>
               </form>
             </div>
           </div>
         </div>
 
-        <div className="footer-bottom cpt-6">
+        <div className="footer-bottom">
           <p>© All Copyright 2024 by monoj</p>
           <div className="footer-terms-item">
             <Link href="#">Terms & Condition</Link>

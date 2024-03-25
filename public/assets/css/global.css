@@ -12,6 +12,7 @@
   /*========== Colors ==========*/
   --main-color: linear-gradient(90deg, #7922e6 6.15%, #9d32fa 99.99%);
   --second-color: #061237;
+  --primary-color: #7922e6;
   --black-color: #0f0d1d;
   --title-color: #393939;
   --white-color: #ffffff;
@@ -267,8 +268,7 @@ h2.sec-title:before {
   }
   .section-title {
     width: 100%;
-    margin: auto;
-    text-align: center;
+    font-size: 35px;
   }
 }
 @media screen and (max-width: 768px) {

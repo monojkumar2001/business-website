@@ -1,0 +1,38 @@
+@media screen and (max-width: 768px) {
+  h1.hero-title {
+    font-size: 40px;
+    line-height: 140%;
+  }
+  .hero {
+    padding: 185px 0 120px 0;
+  }
+  .about-img img {
+    width: 100%;
+  }
+  .about-img-2 {
+    right: 0px;
+  }
+  .about-right {
+    margin-top: 50px;
+  }
+  .service-title {
+    margin: auto;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .our-team-item {
+    margin-bottom: 40px;
+  }
+  .footer-item {
+    margin-bottom: 30px;
+  }
+  .footer {
+    padding: 50px 0;
+  }
+  .banner {
+    padding: 170px 0 80px 0;
+  }
+  .contact-us-form {
+    padding: 30px 20px 60px 20px;
+  }
+}

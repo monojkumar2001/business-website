@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import { HashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 // import SocialMediaLinkItem from "./SocialMediaLink/SocialMediaLinkItem";
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 
@@ -54,7 +54,7 @@ function Header() {
               <div className="header-right">
                 <ul>
                   <li>
-                    <Link className="sub-btn" href="/#about">
+                    <Link className="sub-btn" to="/">
                       Home
                     </Link>
                   </li>
@@ -77,9 +77,9 @@ function Header() {
                     </div>
                   </li>
                   <li>
-                    <Link className="sub-btn" to="/#team">
+                    <HashLink className="sub-btn" to="/#team">
                       Our Team
-                    </Link>
+                    </HashLink>
                   </li>
                   <li>
                     <Link className="sub-btn" to="/contact-us">
