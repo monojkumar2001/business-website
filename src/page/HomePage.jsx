@@ -1,6 +1,7 @@
 import AboutUs from "../components/AboutUs";
 import OurTeam from "../components/OurTeam";
 import Services from "../components/Services";
+import WhyChoose from "../components/WhyChoose";
 
 const HomePage = () => {
   return (
@@ -26,6 +27,8 @@ const HomePage = () => {
       <Services/>
       {/* ============= Our Team ============= */}
       <OurTeam/>
+
+
     </>
   );
 };

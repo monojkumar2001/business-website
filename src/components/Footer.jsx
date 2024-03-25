@@ -13,9 +13,9 @@ const Footer = () => {
           <div className="col-md-4">
             <div className="footer-item">
               <Link className="footer-logo" href="/">
-                <img src="/assets/images/logo.png" alt="" />
+                <img src="/assets/images/logo.svg" alt="" />
               </Link>
-              <p>
+              <p className="mt-5 mb-5">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
                 fugiat autem obcaecati fugit praesentium{" "}
               </p>
@@ -30,11 +30,7 @@ const Footer = () => {
                     <FaTwitter />
                   </Link>
                 </li>
-                <li>
-                  <Link href="#">
-                    <FaTwitter />
-                  </Link>
-                </li>
+
                 <li>
                   <Link href="#">
                     <FaLinkedinIn />
@@ -86,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-bottom">
+        <div className="footer-bottom cpt-6">
           <p>© All Copyright 2024 by monoj</p>
           <div className="footer-terms-item">
             <Link href="#">Terms & Condition</Link>
